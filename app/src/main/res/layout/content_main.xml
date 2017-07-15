@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.nhuchhe.nischit.tictactoe.Launcher"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:textSize="30sp"
+        android:paddingBottom="20dp"
+        android:text="@string/gameTitle"/>
+    <ImageView
+        android:id="@+id/whoWonImage"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:src="@drawable/logo"
+        />
+    <TextView
+        android:id="@+id/winText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25sp"
+        />
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/SinglePlayer"
+                android:layout_width="165dp"
+                android:layout_height="65dp"
+                android:textSize="25sp"
+                android:textAllCaps="true"
+
+                android:background="@drawable/single"
+
+               />
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="148dp"
+                android:layout_height="65dp"
+                android:textSize="25sp"
+                android:textAllCaps="true"
+
+                android:background="@drawable/dual"
+
+                />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>
